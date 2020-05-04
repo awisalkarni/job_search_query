@@ -1,6 +1,6 @@
 ## Improvement
 
-1. Add index related fields on JOIN query.
+1. Add index related fields on JOIN query. I usually use EXPLAIN {query} to identify columns that need to be indexed.
 2. Add index to soft delete column 'deleted'
 3. Create fulltext index on columns that need to be searched
 4. Avoid using wildcards at the beginning of a predicate such as `jobcategories.NAME LIKE '​%キャビンアテンダント%'`. Using `​WHERE LIKE @キャビンアテンダント%'` is a lot faster than using `%キャビンアテンダント%`
